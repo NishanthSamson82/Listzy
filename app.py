@@ -1,7 +1,7 @@
 import streamlit as st
 from streamlit_option_menu import option_menu
 import pandas as pd
-import csv
+
 selected = option_menu("Menu", ["Home",'Tasks','Upload','Settings'],
         icons=['house','list-check','upload', 'gear',], menu_icon="caret-down-fill", default_index=1,orientation="horizontal")
 if(selected == "Tasks"):
