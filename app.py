@@ -71,6 +71,7 @@ if selected == "Tasks":
             tasklist = ""
             for task in fields:
                 tasklist += task +','
+            tasklist = tasklist[:-1]
             st.download_button(label="Download data as CSV", data=tasklist, file_name='mytasks.csv')
 
 if selected == "Upload":
