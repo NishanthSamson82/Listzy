@@ -67,13 +67,11 @@ if selected == "Tasks":
                     st.success("Hooray! All tasks Completed")
                 else:
                     st.error("Tasks remain!")
-            columns = ls
-            dict = {"Tasks": columns}
-            df = pd.DataFrame(dict)
-            csv = df.to_csv(index=False)
-            st.download_button(
-                label="Download data as CSV", data=csv, file_name="mytasks.csv"
-            )
+            fields = ls.copy()
+            tasklist = ""
+            for task in fields:
+                tasklist += task +','
+            st.download_button(label="Download data as CSV", data=tasklist, file_name='mytasks.csv')
 
 if selected == "Upload":
 
