@@ -13,8 +13,8 @@ def load_lottieurl(url: str):
 st.set_page_config(page_title='LISTZY', page_icon = 'Favicon.png', initial_sidebar_state = 'auto',layout="wide")
 
 
-selected = option_menu("LISTZY", ["Home",'Tasks','Upload','Settings'],
-        icons=['house','list-check','upload', 'gear',], menu_icon="chevron-double-down", default_index=1,orientation="horizontal")
+selected = option_menu("LISTZY", ["Home",'Tasks','Upload','About'],
+        icons=['house','list-check','upload', 'info-square',], menu_icon="chevron-double-down", default_index=1,orientation="horizontal")
 
 if(selected=="Home"):
     original_title = '<span style="font-family:Montserrat; color:#FFFFFF; font-size: 80px;"><b>LIST</b></span><span style="font-family:Montserrat; color:#8B55D8; font-size: 80px;"><b>ZY</b></span>'
@@ -25,7 +25,7 @@ if(selected=="Home"):
         st.title("Welcome to Listzy")
         "Listzy is an amazing way to keep your *tasks* organized and achieve your goals"
         "With Listzy you can store, manage and take your tasks along with you wherever you go"
-        punch = '<p style="font-family:Montserrat; color:#8B55D8; font-size: 15px;"><b>Never miss a deadline again!</b></p>'
+        punch = '<p style="font-family:Montserrat; color:#8B55D8; font-size: 15px;"><b>Listzy - Lists made easy!</b></p>'
         st.markdown(punch, unsafe_allow_html=True)
         "#"
         "#"
@@ -163,13 +163,13 @@ if(selected=="Upload"):
                 st.success("Hooray! All tasks Completed")
             else:
                 st.error("Tasks remain!")
-if(selected=="Settings"):
+if(selected=="About"):
 
     st.header("Thank you for using Listzy, any feedback on the app would be much appreciated!")
     "#"
-    st.write("Developed and designed by: *Nishanth Samson*")
+    st.write("Developed and designed by: [*Nishanth Samson*](http://www.nishanthsamson.me/)")
     st.write("[Github profile](https://github.com/NishanthSamson82)")
-    st.write("[More about me](http://www.nishanthsamson.me/)")
+    st.write("Contributors: [Melvin Jebasamuel](https://github.com/Mel28vin) ")
     st.header(":mailbox: Feedback")
 
     contact_form = """
@@ -190,5 +190,3 @@ if(selected=="Settings"):
 
 
     local_css("style.css")
-
-
