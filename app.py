@@ -11,10 +11,9 @@ def load_lottieurl(url: str):
     return r.json()
 
 st.set_page_config(page_title='LISTZY', page_icon = 'Favicon.png', initial_sidebar_state = 'auto',layout="wide")
-page_icon='Favicon.png'
 
 selected = option_menu("LISTZY", ["Home",'Tasks','Upload','About'],
-        icons=['house','list-check','upload', 'info-square',], menu_icon="chevron-double-down", default_index=1,orientation="horizontal")
+        icons=['house','list-check','upload', 'info-square',], menu_icon="chevron-double-down", default_index=0,orientation="horizontal")
 
 if(selected=="Home"):
     original_title = '<span style="font-family:Montserrat; color:#FFFFFF; font-size: 80px;"><b>LIST</b></span><span style="font-family:Montserrat; color:#8B55D8; font-size: 80px;"><b>ZY</b></span>'
@@ -22,7 +21,7 @@ if(selected=="Home"):
     left_col, right_col = st.columns(2)
     with left_col:
         "###"
-        st.title("Welcome to Listzy"+" "+page_icon)
+        st.title("Welcome to Listzy")
         "Listzy is an amazing way to keep your *tasks* organized and achieve your goals"
         "With Listzy you can store, manage and take your tasks along with you wherever you go"
         punch = '<p style="font-family:Montserrat; color:#8B55D8; font-size: 15px;"><b>Listzy - Lists made easy!</b></p>'
