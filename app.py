@@ -142,12 +142,14 @@ if(selected=="Upload"):
                 if(length == 0):
                     st.balloons()
 
-        st.header("Completed Tasks")
-        for task in lc:
-            st.write(task)
-        st.header("Incomplete Tasks")
-        for task in ln:
-            st.write(task)
+        with st.expander("Completed Tasks", expanded=False):
+            st.header("Completed Tasks")
+            for task in lc:
+                st.write(task)
+        with st.expander("Incomplete Tasks", expanded=False):
+            st.header("Incomplete Tasks")
+            for task in ln:
+                st.write(task)
 
     mytsks = []
     uploaded_file = st.file_uploader("Upload .csv format of comma separated tasks", type = ['csv'])
