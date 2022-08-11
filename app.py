@@ -141,13 +141,11 @@ if(selected=="Upload"):
                     st.balloons()
 
         with st.expander("Completed Tasks", expanded=False):
-            st.header("Completed Tasks")
             for task in lc:
-                st.write(task)
+                st.write(":heavy_check_mark: "+ task)
         with st.expander("Incomplete Tasks", expanded=False):
-            st.header("Incomplete Tasks")
             for task in ln:
-                st.write(task)
+                st.write(":x: " + task)
 
     mytsks = []
     uploaded_file = st.file_uploader("Upload .csv format of comma separated tasks", type = ['csv'])
