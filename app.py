@@ -84,11 +84,9 @@ if(selected == "Tasks"):
                     st.balloons()
 
         with st.expander("Completed Tasks", expanded=False):
-            st.header("Completed Tasks")
             for task in lc:
                 st.write(":heavy_check_mark: "+ task)
         with st.expander("Incomplete Tasks", expanded=False):
-            st.header("Incomplete Tasks")
             for task in ln:
                 st.write(":x: " + task)
 
